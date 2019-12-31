@@ -2,6 +2,9 @@ package com.jt.basemodule.net;
 
 import android.util.Log;
 
+import com.jt.basemodule.api.apiService;
+import com.jt.basemodule.bean.TokenBean;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -23,6 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitUtils {
 
+    private String StringUri = "http://api.zydeveloper.com:10001/";
     private Retrofit mRetrofit;
 
     private static volatile RetrofitUtils singleton;
@@ -48,7 +52,7 @@ public class RetrofitUtils {
                 .build();
 
         mRetrofit = new Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl(StringUri)
                 .client(builder)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
@@ -92,7 +96,19 @@ public class RetrofitUtils {
 
     //获取token
     private String getToken() {
-
-        return null;
+        try {
+            TokenBean body = mRetrofit.create(apiService.class)
+                    .getToken("password", "341de11517517819a16213218f10712d1df1fa1221471591", "")
+                    .execute().body();
+            return body.getAccess_token();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
+
+    public <T> T create(Class<T> clazz) {
+        return mRetrofit.create(clazz);
+    }
+
 }

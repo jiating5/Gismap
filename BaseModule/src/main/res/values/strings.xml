@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">BaseModule</string>
+    <string name="app_name">银杏IM</string>
+    <string name="app_login">用户登录</string>
+    <string name="app_register">注册用户</string>
+    <string name="app_modity">修改密码</string>
 </resources>

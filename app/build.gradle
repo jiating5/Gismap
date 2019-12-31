@@ -10,6 +10,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -26,9 +32,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    implementation project(path: ':BaseModule')
     implementation project(path: ':CommonModule')
-    if(IsHomeModule.toBoolean()){
+    if (IsHomeModule.toBoolean()) {
         implementation project(path: ':HomeModule')
     }
+    if (IsChatModule.toBoolean()) {
+        implementation project(path: ':ChatModule')
+    }
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    implementation project(path: ':BaseModule')
+    implementation project(path: ':XmppLibrary')
 }

@@ -1,2 +1,2 @@
-include ':app', ':BaseModule', ':HomeModule', ':CommonModule'
+include ':app', ':BaseModule', ':HomeModule', ':CommonModule', ':XmppLibrary', ':ChatModule'
 rootProject.name='GisIMPro'

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ModifyActivity"
+    android:orientation="vertical"
+    android:background="@mipmap/zhuce">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/dp_30"
+        android:textStyle="bold"
+        android:text="@string/app_modity"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/modity_uname"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="请输入用户名"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/modity_pwd"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="请输入密码"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/modity_repwd"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="再次确认密码"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/modity_modity"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp_30"
+        android:text="保存"
+        android:background="@drawable/button_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+</LinearLayout>

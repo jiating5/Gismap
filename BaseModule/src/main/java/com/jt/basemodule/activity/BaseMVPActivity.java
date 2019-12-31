@@ -14,14 +14,13 @@ import com.jt.basemodule.base.IView;
  * GitHub：https://github.com/jiating5
  * description：
  */
-public abstract class BaseMVPActivity<T extends BasePresenter<IView, IModel>> extends BaseActivity {
+public abstract class BaseMVPActivity<T extends BasePresenter> extends BaseActivity {
     public T presenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
-        initVar();
         initViews();
         initData();
         doEvent();
@@ -35,9 +34,6 @@ public abstract class BaseMVPActivity<T extends BasePresenter<IView, IModel>> ex
 
     //初始化视图
     protected abstract void initViews();
-
-    //初始化Bundle变量
-    protected abstract void initVar();
 
     protected abstract int getLayoutId();
 
