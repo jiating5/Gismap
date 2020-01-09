@@ -24,7 +24,7 @@ import com.jt.gisimpro.mvp.userpresenter.UserPresenter;
 public class RegisterActivity extends BaseMVPActivity<UserContract.BaseUserPresenter> implements UserContract.IUserView {
 
     Button register;
-    EditText uname,pwd,repwd;
+    EditText uname,pwd,repwd,code,nick;
     UserPresenter userPresenter;
 
     @Override
@@ -39,7 +39,7 @@ public class RegisterActivity extends BaseMVPActivity<UserContract.BaseUserPrese
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    RegisterBean bean = new RegisterBean(1, "", uname.getText().toString(), uname.getText().toString(), "女", "2019/12/30", "", "", 1, "", "", 1, 1);
+                    RegisterBean bean = new RegisterBean(1, code.getText().toString(), uname.getText().toString(), uname.getText().toString(), "女", "2019/12/30", "", nick.getText().toString(), 1, "", "", 1, 1);
                     userPresenter.getResgister(bean);
             }
         });
@@ -55,6 +55,8 @@ public class RegisterActivity extends BaseMVPActivity<UserContract.BaseUserPrese
         uname = findViewById(R.id.register_uname);
         pwd = findViewById(R.id.register_pwd);
         repwd = findViewById(R.id.register_repwd);
+        nick = findViewById(R.id.register_nick);
+        code = findViewById(R.id.register_code);
         register = findViewById(R.id.register_register);
         userPresenter = new UserPresenter();
         userPresenter.AttachView(this);

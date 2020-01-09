@@ -233,7 +233,7 @@ public class XmppManager {
                     .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
                     .setCompressionEnabled(false)
                     .setDebuggerEnabled(true)
-                    .setSendPresence(false)//设置离线状态获取离线消息
+//                    .setSendPresence(false)//设置离线状态获取离线消息
                     .build();
 
             //设置需要经过同意才可以加为好友

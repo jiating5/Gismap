@@ -6,6 +6,7 @@ android {
     sourceSets {main{jniLibs.srcDirs=['libs'] }}
 
     defaultConfig {
+        multiDexEnabled true
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
@@ -61,4 +62,24 @@ dependencies {
     api 'com.google.android.material:material:1.1.0-alpha09'
     //noinspection GradleCompatible
     api 'com.android.support:design:28.1.1'
+
+    api 'com.android.support:multidex:1.0.3'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+
+    api 'com.github.alorma:timelineview:2.3.0'
+
+    api 'cn.yipianfengye.android:zxing-library:2.2'
+
+    api 'me.thewyp:avatar:1.0.4'
+
+    api 'com.aliyun.dpa:oss-android-sdk:2.9.2'
+
+    api 'com.github.bumptech.glide:glide:4.10.0'
+
+    api 'com.ilike:voicerecorder:1.0.2'
+
+    api 'com.bigkoo:alertview:1.0.3'
+
+    //视频压缩
+    api 'com.iceteck.silicompressorr:silicompressor:2.2.2'
 }

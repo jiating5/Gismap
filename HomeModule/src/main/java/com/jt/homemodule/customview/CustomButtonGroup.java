@@ -34,6 +34,6 @@ public class CustomButtonGroup extends LinearLayout {
     }
 
     private void initView(Context context) {
-        addView(LayoutInflater.from(context).inflate(R.layout.customview_buttongroup,null));
+        addView(LayoutInflater.from(context).inflate(R.layout.home_custom_bottom,null));
     }
 }

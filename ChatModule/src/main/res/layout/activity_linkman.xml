@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LinkmanActivity">
+    android:orientation="vertical"
+    tools:context=".view.activity.LinkmanActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.jt.basemodule.ui.CustomTitleBar
+        android:id="@+id/link_ctb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        app:leftSrc="@mipmap/back_icon"
+        app:titlebarName="@string/chat_linkman"
+        app:rightTypeText="false"
+        app:rightSrc="@mipmap/tianjia"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1.5"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/link_tl"
+        android:layout_width="match_parent"
+        app:tabIndicatorColor="#FF8400"
+        app:tabTextColor="#fff"
+        app:tabIndicatorHeight="@dimen/dp_5"
+        app:tabSelectedTextColor="#FF8400"
+        app:tabMode="auto"
+        android:background="@color/colorPrimary"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/link_vp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="9"/>
+
+</LinearLayout>

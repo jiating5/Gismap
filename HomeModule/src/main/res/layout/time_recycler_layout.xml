@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/time_background"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#fefefe"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="我的活动"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_marginRight="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/sq"
+        android:layout_width="20dp"
+        android:layout_height="25dp"/>
+
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="30dp"
+        android:background="#fefefe"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="21dp"
+        android:id="@+id/main_time_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#fefefe"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+</RelativeLayout>

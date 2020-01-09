@@ -14,13 +14,47 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
+        <ImageView
+            android:id="@+id/home_iv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/erweima"
+            android:layout_gravity="right"/>
+
         <com.jt.homemodule.customview.CustomButtonGroup
             android:id="@+id/home_cbg"
             android:layout_width="@dimen/dp_400"
-            android:layout_height="@dimen/dp_80"
+            android:layout_height="@dimen/dp_120"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginBottom="@dimen/dp_50"
             android:background="#00000000"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_300"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_200">
+            <include layout="@layout/time_recycler_layout"/>
+        </LinearLayout>
+
+        <com.jt.homemodule.customview.CustomGroupSideView
+            android:background="@drawable/custom_singe_background"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_180"
+            android:layout_gravity="right"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_200"/>
+
+        <com.jt.homemodule.customview.CustomSingeSideView
+            android:background="@drawable/custom_group_background"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_300"
+            android:layout_gravity="right"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_400"/>
+
     </FrameLayout>
 
     <LinearLayout

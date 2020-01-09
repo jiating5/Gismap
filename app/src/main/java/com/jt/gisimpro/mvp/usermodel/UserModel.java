@@ -71,7 +71,7 @@ public class UserModel implements UserContract.IUserModel {
 
             @Override
             public void subscribe(ObservableEmitter<Boolean> emitter) throws Exception {
-                XmppManager.getInstance().getXmppUserManager().createAccount(loginBean.getUsername(), (String) loginBean.getPwd());
+                XmppManager.getInstance().getXmppUserManager().login(loginBean.getUsername(), (String) loginBean.getPwd());
                 emitter.onNext(true);
             }
         });
@@ -104,7 +104,7 @@ public class UserModel implements UserContract.IUserModel {
 
             @Override
             public void subscribe(ObservableEmitter<Boolean> emitter) throws Exception {
-                XmppManager.getInstance().getXmppUserManager().createAccount(uname,pwd);
+                XmppManager.getInstance().getXmppUserManager().changePassword(pwd);
                 emitter.onNext(true);
             }
         });

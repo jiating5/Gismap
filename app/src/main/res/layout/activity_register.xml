@@ -24,6 +24,22 @@
         android:layout_gravity="center"/>
 
     <EditText
+        android:id="@+id/register_code"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="请输入code"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/register_nick"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="请输入昵称"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
         android:id="@+id/register_uname"
         android:layout_width="@dimen/dp_320"
         android:layout_height="0dp"

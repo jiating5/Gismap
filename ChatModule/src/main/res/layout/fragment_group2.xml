@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.addfragment.GroupFragment">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:layout_margin="@dimen/dp_10"
+        android:queryHint="搜索群账号/手机号码/昵称"
+        android:background="@drawable/searchview_layout"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:hint="创建群"
+        android:padding="@dimen/dp_10"
+        android:background="@drawable/edittext_layout"
+        android:drawableLeft="@mipmap/chuangjianv"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:hint="扫码进群"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@drawable/edittext_layout"
+        android:drawableLeft="@mipmap/saoyisao"/>
+
+</LinearLayout>

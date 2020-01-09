@@ -3,4 +3,7 @@
     <string name="app_login">用户登录</string>
     <string name="app_register">注册用户</string>
     <string name="app_modity">修改密码</string>
+    <string name="chat_linkman">联系人</string>
+    <string name="chat_phoneman">手机联系人</string>
+    <string name="chat_add">添加</string>
 </resources>

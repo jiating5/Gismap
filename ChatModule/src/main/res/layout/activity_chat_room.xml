@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.ChatRoomActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/chatromm_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/back_icon"
+                android:padding="@dimen/dp_10"/>
+
+            <TextView
+                android:id="@+id/chatroom_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="24dp"
+                android:text="清欢"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="#fff"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatromm_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10">
+
+            <EditText
+                android:id="@+id/chatroom_edt_msg"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="3.5"
+                android:layout_height="match_parent"
+                android:hint="请输入..."
+                android:background="@drawable/chatromm_ed_layout"
+                android:layout_margin="@dimen/dp_5"/>
+
+            <Button
+                android:id="@+id/chatromm_btn_send"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="发送"
+                android:textColor="#fff"
+                android:background="@drawable/chatroom_btn_layout"
+                android:layout_margin="@dimen/dp_5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/chatromm_iv_voice"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_5"
+                android:src="@mipmap/yuyin"/>
+
+            <ImageView
+                android:id="@+id/chatroom_iv_photo"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_5"
+                android:src="@mipmap/xiangce"/>
+
+            <ImageView
+                android:id="@+id/chatroom_iv_video"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_5"
+                android:src="@mipmap/camera"/>
+
+            <ImageView
+                android:id="@+id/chatromm_iv_location"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_5"
+                android:src="@mipmap/address"/>
+
+            <ImageView
+                android:id="@+id/chatroom_iv_face"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_5"
+                android:src="@mipmap/biaoqing"/>
+
+            <ImageView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@mipmap/more"
+                android:padding="@dimen/dp_5"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/chatroom_rv_face"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_300"/>
+    </LinearLayout>
+
+    <com.ilike.voicerecorder.widget.VoiceRecorderView
+        android:visibility="gone"
+        android:id="@+id/chatromm_vrv_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
